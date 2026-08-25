@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Cloud, Server, Cpu, Database, Activity, Terminal, Copy, Check, Search, ShieldCheck, ArrowRight, Layers } from 'lucide-react';
+import { Cloud, Server, Cpu, Database, Activity, Terminal, Copy, Check, Search, ShieldCheck, ArrowRight, Layers, Star, Users } from 'lucide-react';
 
 const INFRA_NODES = [
   {
@@ -49,12 +49,15 @@ export function HeroSection() {
 
   return (
     <section className="cloudstack-hero">
+      <div className="cloudstack-ambient-glow" />
+
       <div className="cloudstack-hero-grid">
         {/* Left: Infrastructure Value Prop */}
         <div className="cloudstack-hero-content">
           <div className="cloudstack-badge">
             <span className="cloudstack-pulse-green" />
             <span>Multi-Cloud Architecture & DevOps Index</span>
+            <span className="cloudstack-live-pill">v2.8</span>
           </div>
 
           <h1 className="cloudstack-title">
@@ -87,6 +90,35 @@ export function HeroSection() {
               Search Infra
             </button>
           </form>
+
+          {/* Dual Action CTAs */}
+          <div className="cloudstack-cta-row">
+            <Link href="/category/cloud" className="cloudstack-primary-btn">
+              Explore 3,400+ Stacks <ArrowRight size={15} />
+            </Link>
+            <Link href="/submit" className="cloudstack-secondary-btn">
+              Submit Cloud Stack
+            </Link>
+          </div>
+
+          {/* Social Proof */}
+          <div className="cloudstack-social-proof">
+            <div className="cloudstack-avatar-stack">
+              <span className="cloud-avatar av-1">☁️</span>
+              <span className="cloud-avatar av-2">⚙️</span>
+              <span className="cloud-avatar av-3">🐳</span>
+              <span className="cloud-avatar av-4">⚡</span>
+            </div>
+            <div className="cloudstack-proof-text">
+              <div className="cloudstack-proof-stars">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} size={12} className="fill-sky-400 text-sky-400" />
+                ))}
+                <span className="cloudstack-rating">4.9/5.0</span>
+              </div>
+              <span className="cloudstack-subtext">Trusted by 45,000+ DevOps and SRE leads</span>
+            </div>
+          </div>
 
           {/* Cloud ecosystem pills */}
           <div className="cloudstack-tags-row">
