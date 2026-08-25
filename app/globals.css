@@ -543,3 +543,414 @@ a {
   flex-wrap: wrap;
   gap: var(--spacing-sm);
 }
+
+/* ==========================================================================
+   CloudStackHunt Infrastructure & Cluster Topology Hero
+   ========================================================================== */
+.cloudstack-hero {
+  margin-bottom: var(--spacing-xl);
+  padding: var(--spacing-xl) 0 var(--spacing-lg);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.cloudstack-hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: var(--spacing-xl);
+  align-items: center;
+}
+
+@media (max-width: 960px) {
+  .cloudstack-hero-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+}
+
+.cloudstack-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background-color: var(--badge-bg);
+  border: 1px solid rgba(2, 132, 199, 0.3);
+  border-radius: 9999px;
+  margin-bottom: var(--spacing-md);
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--badge-text);
+}
+
+.cloudstack-pulse-green {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #10b981;
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.8);
+}
+
+.cloudstack-title {
+  font-size: clamp(28px, 3.2vw, 42px);
+  line-height: 1.15;
+  margin-bottom: var(--spacing-sm);
+  color: var(--text-ink);
+  font-weight: 800;
+}
+
+.cloudstack-accent-text {
+  background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cloudstack-lead {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin-bottom: var(--spacing-lg);
+  max-width: 520px;
+}
+
+.cloudstack-search-bar {
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-main);
+  padding: 4px 6px 4px 14px;
+  margin-bottom: var(--spacing-md);
+  transition: all 0.15s ease;
+}
+
+.cloudstack-search-bar:focus-within {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.2);
+}
+
+.cloudstack-search-icon {
+  color: var(--text-muted);
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.cloudstack-search-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  color: var(--text-ink);
+  outline: none;
+}
+
+.cloudstack-search-btn {
+  background-color: var(--color-primary);
+  color: var(--color-primary-text);
+  border: none;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.cloudstack-search-btn:hover {
+  background-color: var(--color-primary-active);
+}
+
+.cloudstack-tags-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: var(--spacing-lg);
+  flex-wrap: wrap;
+}
+
+.cloudstack-tags-label {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.cloudstack-tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.cloudstack-tag-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  color: var(--text-body);
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  padding: 4px 10px;
+  border-radius: 9999px;
+  transition: all 0.15s ease;
+}
+
+.cloudstack-tag-pill:hover {
+  background-color: var(--bg-surface-soft);
+  border-color: var(--border-bright);
+  color: var(--text-ink);
+}
+
+.cloudstack-metrics-strip {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding-top: var(--spacing-sm);
+}
+
+.cloudstack-metric-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.cloudstack-metric-val {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--text-ink);
+}
+
+.cloudstack-metric-sub {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.cloudstack-metric-divider {
+  width: 1px;
+  height: 24px;
+  background-color: var(--border-color);
+}
+
+/* Topology Node Card */
+.cloudstack-topology-card {
+  background: linear-gradient(180deg, #0b1329 0%, #060b18 100%);
+  border: 1px solid rgba(2, 132, 199, 0.25);
+  border-radius: 14px;
+  padding: var(--spacing-lg);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+}
+
+.topology-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-sm);
+}
+
+.topology-title-cluster {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.topology-header-text {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--text-ink);
+}
+
+.topology-status-pill {
+  font-size: 11px;
+  font-family: var(--font-mono);
+  background-color: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.topology-layers-nav {
+  display: flex;
+  gap: 6px;
+  background-color: rgba(15, 23, 42, 0.8);
+  padding: 4px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.topology-layer-btn {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 11.5px;
+  font-weight: 500;
+  padding: 6px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.topology-layer-btn.active {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
+.topology-node-specs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  background-color: rgba(30, 41, 59, 0.4);
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  margin-bottom: 12px;
+}
+
+.node-spec-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.node-spec-title {
+  font-size: 10px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.node-spec-content {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-ink);
+}
+
+.topology-pods-wrapper {
+  margin-bottom: 12px;
+}
+
+.topology-pods-label {
+  font-size: 11px;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 6px;
+}
+
+.topology-pods-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.topology-pod-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  background-color: #030712;
+  color: #93c5fd;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.pod-pulse-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #38bdf8;
+  box-shadow: 0 0 6px #38bdf8;
+}
+
+.topology-cli-box {
+  background-color: #030712;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin-bottom: var(--spacing-sm);
+}
+
+.topology-cli-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.topology-cli-dots {
+  display: flex;
+  gap: 4px;
+}
+
+.cli-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+.cli-dot.red { background-color: #ef4444; }
+.cli-dot.yellow { background-color: #eab308; }
+.cli-dot.green { background-color: #22c55e; }
+
+.topology-copy-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 11px;
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.topology-copy-btn:hover {
+  color: var(--text-ink);
+}
+
+.topology-cli-cmd {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: #f1f5f9;
+}
+
+.cli-prompt {
+  color: #38bdf8;
+  font-weight: 700;
+}
+
+.topology-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 4px;
+}
+
+.topology-verified-note {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11.5px;
+  color: var(--text-muted);
+}
+
+.topology-submit-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #38bdf8;
+  font-size: 12px;
+  font-weight: 600;
+  transition: opacity 0.15s ease;
+}
+
+.topology-submit-link:hover {
+  opacity: 0.85;
+}
+
