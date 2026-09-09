@@ -4,30 +4,133 @@ import { request, mockMode } from './client';
 const MOCK_PRODUCTS: Product[] = [
   {
     "id": "csh-1",
-    "title": "ClusterMesh Edge",
-    "tagline": "Multi-cloud Kubernetes federation controller with automatic latency rerouting",
-    "description": "Unify AWS, GCP, and bare-metal clusters under a single zero-trust service mesh with sub-millisecond global failover.",
-    "logo": "https://placehold.co/96x96/0f172a/0284c7?text=CM",
-    "link": "https://example.com/clustermesh",
-    "category": "Kubernetes & Containers",
+    "title": "Coolify",
+    "tagline": "An open-source & self-hostable Heroku / Netlify alternative to manage servers and apps easily",
+    "link": "https://coolify.io",
+    "category": "CI/CD & DevOps",
+    "upvotes": 520,
+    "tags": [
+      "self-hosted",
+      "cloud",
+      "paas"
+    ],
+    "techStack": [
+      "PHP",
+      "Laravel",
+      "Docker"
+    ],
+    "maker": {
+      "name": "Andras Bacsai",
+      "avatar": "https://placehold.co/64x64/38bdf8/080e1a?text=CF"
+    }
+  },
+  {
+    "id": "csh-2",
+    "title": "Neon DB",
+    "tagline": "Serverless Postgres with autoscaling, instantaneous branching, and bottomless storage tiering",
+    "link": "https://neon.tech",
+    "category": "Search & Data",
+    "upvotes": 470,
+    "tags": [
+      "postgres",
+      "database",
+      "serverless"
+    ],
+    "techStack": [
+      "Rust",
+      "PostgreSQL",
+      "C"
+    ],
+    "maker": {
+      "name": "Nikita Shamgunov",
+      "avatar": "https://placehold.co/64x64/10b981/080e1a?text=ND"
+    }
+  },
+  {
+    "id": "csh-3",
+    "title": "Cloudflare Workers",
+    "tagline": "Deploy serverless compute and web applications globally across 300+ cities in milliseconds",
+    "link": "https://workers.cloudflare.com",
+    "category": "Developer Tools",
+    "upvotes": 440,
+    "tags": [
+      "edge-compute",
+      "serverless",
+      "cdn"
+    ],
+    "techStack": [
+      "V8 Isolates",
+      "Rust",
+      "TypeScript"
+    ],
+    "maker": {
+      "name": "Matthew Prince",
+      "avatar": "https://placehold.co/64x64/f59e0b/080e1a?text=CW"
+    }
+  },
+  {
+    "id": "csh-4",
+    "title": "Railway",
+    "tagline": "Deploy code and infrastructure from GitHub with instant preview environments and automated databases",
+    "link": "https://railway.com",
+    "category": "CI/CD & DevOps",
+    "upvotes": 410,
     "tags": [
       "cloud",
-      "kubernetes",
-      "devops"
+      "paas",
+      "containers"
+    ],
+    "techStack": [
+      "Rust",
+      "TypeScript",
+      "Kubernetes"
+    ],
+    "maker": {
+      "name": "Brock Herion",
+      "avatar": "https://placehold.co/64x64/ec4899/080e1a?text=RW"
+    }
+  },
+  {
+    "id": "csh-5",
+    "title": "Upstash",
+    "tagline": "Serverless Redis, Kafka, and QStash with per-request pricing designed for Edge and Serverless",
+    "link": "https://upstash.com",
+    "category": "Search & Data",
+    "upvotes": 380,
+    "tags": [
+      "redis",
+      "kafka",
+      "edge"
     ],
     "techStack": [
       "Go",
-      "Kubernetes",
-      "Envoy",
-      "gRPC"
+      "TypeScript"
     ],
-    "coverImages": [],
-    "upvotes": 495,
-    "launchedAt": "2026-08-18T05:12:33.188Z",
     "maker": {
-      "name": "Elijah Vance",
-      "username": "evance",
-      "avatar": "https://placehold.co/64x64/1e293b/0284c7?text=E"
+      "name": "Enes Akar",
+      "avatar": "https://placehold.co/64x64/8b5cf6/080e1a?text=UP"
+    }
+  },
+  {
+    "id": "csh-6",
+    "title": "Fly.io",
+    "tagline": "Run full-stack apps and databases close to your users on physical servers worldwide",
+    "link": "https://fly.io",
+    "category": "CI/CD & DevOps",
+    "upvotes": 350,
+    "tags": [
+      "containers",
+      "edge",
+      "firecracker"
+    ],
+    "techStack": [
+      "Rust",
+      "Go",
+      "Firecracker"
+    ],
+    "maker": {
+      "name": "Kurt Mackey",
+      "avatar": "https://placehold.co/64x64/a78bfa/080e1a?text=FL"
     }
   }
 ];

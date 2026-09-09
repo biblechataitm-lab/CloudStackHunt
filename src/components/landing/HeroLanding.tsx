@@ -1,66 +1,36 @@
 'use client';
 
-import React, { useEffect, useRef } from 'react';
-import { Search, ArrowRight, TrendingUp } from 'lucide-react';
+import React from 'react';
 
 export function HeroLanding() {
-  const heroRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const hero = heroRef.current;
-    if (!hero) return;
-    const children = hero.querySelectorAll('.csh-animate');
-    children.forEach((el, i) => {
-      const htmlEl = el as HTMLElement;
-      htmlEl.style.opacity = '0';
-      htmlEl.style.transform = 'translateY(24px)';
-      setTimeout(() => {
-        htmlEl.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        htmlEl.style.opacity = '1';
-        htmlEl.style.transform = 'translateY(0)';
-      }, 100 + i * 100);
-    });
-  }, []);
-
   return (
-    <section ref={heroRef} className="csh-hero">
-      <div className="csh-hero-bg" aria-hidden="true" />
-      <div className="csh-hero-container">
-        <div className="csh-hero-content">
-          <div className="csh-animate csh-hero-badge">
-            <span>Cloud Infrastructure Intelligence</span>
-          </div>
-          <h1 className="csh-animate csh-hero-title">
-            Master Your{' '}
-            <span className="csh-accent-text">Cloud Stack</span>
-          </h1>
-          <p className="csh-animate csh-hero-subtitle">
-            Discover 1,300+ cloud infrastructure tools — from Kubernetes operators and serverless frameworks to IaC platforms and observability stacks.
-          </p>
-          <form
-            className="csh-animate csh-hero-search"
-            onSubmit={(e) => {
-              e.preventDefault();
-              const input = e.currentTarget.querySelector('input');
-              if (input?.value.trim()) {
-                window.location.href = `/search?q=${encodeURIComponent(input.value.trim())}`;
-              }
-            }}
-          >
-            <Search size={16} className="csh-hero-search-icon" />
-            <input type="text" placeholder="Search cloud tools, K8s operators..." />
-            <button type="submit">Explore <ArrowRight size={14} /></button>
-          </form>
-          <div className="csh-animate csh-hero-tags">
-            <a href="/category/developer-tools" className="csh-tag">Kubernetes</a>
-            <a href="/category/ai" className="csh-tag">AI Infra</a>
-            <a href="/category/productivity" className="csh-tag">DevOps</a>
-            <a href="/trends" className="csh-tag csh-tag-hot">
-              <TrendingUp size={12} /> Trending
-            </a>
-          </div>
-        </div>
+    <section class="cloud-hero">
+  <div class="cloud-hero-grid container">
+    <div class="cloud-hero-left">
+      <div class="cloud-telemetry-tag">
+        <span class="cloud-dot"></span>
+        <span>EDGE TOPOLOGY · 300+ DATA CENTERS MONITORED</span>
       </div>
-    </section>
+      <h1 class="cloud-title">
+        The Modern Cloud &amp; <span class="cloud-blue">Serverless Stack</span>
+      </h1>
+      <p class="cloud-desc">
+        Explore serverless Postgres databases, edge compute runtimes, self-hosted PaaS engines, and storage rails.
+      </p>
+      <div class="cloud-search-bar">
+        <input type="text" placeholder="Search cloud runtimes, edge DBs, PaaS: Coolify, Neon, Railway..." class="cloud-input" />
+        <button class="cloud-btn">Deploy</button>
+      </div>
+    </div>
+    <div class="cloud-hero-right">
+      <div class="cloud-region-monitor">
+        <div class="region-row"><span class="region-name">🇺🇸 US-EAST-1</span><span class="region-ping ping-green">12ms · 99.999%</span></div>
+        <div class="region-row"><span class="region-name">🇪🇺 EU-CENTRAL-1</span><span class="region-ping ping-green">24ms · 99.998%</span></div>
+        <div class="region-row"><span class="region-name">🇯🇵 AP-NORTHEAST-1</span><span class="region-ping ping-green">38ms · 100.0%</span></div>
+        <div class="region-row"><span class="region-name">🇧🇷 SA-EAST-1</span><span class="region-ping ping-green">45ms · 99.995%</span></div>
+      </div>
+    </div>
+  </div>
+</section>
   );
 }
