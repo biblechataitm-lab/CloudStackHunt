@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
 import { Cloud, Server, Database, Shield, Terminal, ArrowRight, CheckCircle2, Zap, Radio, Layers } from 'lucide-react';
 
 export function LandingSections() {
@@ -150,12 +149,12 @@ export function LandingSections() {
             Get your developer tooling, Kubernetes operator, or cloud service in front of enterprise decision makers.
           </p>
           <div className="launch-cta-buttons">
-            <Link href="/submit" className="launch-cta-primary">
+            <a href="/submit" className="launch-cta-primary">
               Deploy Stack Now <ArrowRight size={15} />
-            </Link>
-            <Link href="/category/cloud" className="launch-cta-secondary">
+            </a>
+            <a href="/category/cloud" className="launch-cta-secondary">
               Explore Stacks
-            </Link>
+            </a>
           </div>
         </div>
       </section>
