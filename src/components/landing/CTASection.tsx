@@ -9,7 +9,7 @@ export function CTASection() {
       <div className="csh-cta-glow" aria-hidden="true" />
       <div className="csh-cta-content">
         <h2 className="csh-cta-title">Submit Your Cloud Tool</h2>
-        <p className="csh-cta-subtitle">Get discovered by 18K+ cloud engineers, SREs, and platform engineering teams.</p>
+        <p className="csh-cta-subtitle">Get discovered by cloud engineers, SREs, and platform engineering teams.</p>
         <div className="csh-cta-buttons">
           <a href="/submit" className="csh-cta-btn-primary">
             <Rocket size={15} /> Submit Product

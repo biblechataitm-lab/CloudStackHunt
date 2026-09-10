@@ -3,10 +3,10 @@
 import React from 'react';
 
 const STATS = [
-  { value: '1,300+', label: 'Cloud Tools' },
-  { value: '18K+', label: 'Cloud Engineers' },
-  { value: '3', label: 'Major Clouds' },
-  { value: '98%', label: 'Uptime Tracked' },
+  { value: '100%', label: 'Direct Maker Submissions' },
+  { value: 'Realtime', label: 'Verified Catalog Releases' },
+  { value: 'Community', label: 'Upvote & Feedback Engine' },
+  { value: 'Zero Tracking', label: 'Privacy First Directory' },
 ];
 
 export function StatsSection() {
